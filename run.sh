@@ -28,6 +28,9 @@ fi
 # Mount the webdav drive 
 mount -t davfs $URL /mnt/webdrive -o uid=$FOLDER_USER,gid=users,dir_mode=755,file_mode=755
 
+#update borgmatic config file
+sed -i "s|REPO_NAME|$REPO_NAME|g" /etc/borgmatic/config.yaml
+
 #initialize borg repository
 ~/.local/bin/borgmatic init --encryption repokey
 

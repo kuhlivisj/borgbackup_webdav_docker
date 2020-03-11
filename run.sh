@@ -38,4 +38,4 @@ sed -i "s|REPO_NAME|$REPO_NAME|g" /etc/borgmatic/config.yaml
 ~/.local/bin/borgmatic --verbosity 1
 
 #Unmount the webdav drive
-umount /mnt/source
+umount /mnt/webdrive
